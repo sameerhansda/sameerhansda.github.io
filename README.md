@@ -1,4 +1,7 @@
 # Forked from https://github.com/codewithsadee/vcard-personal-portfolio.git
+Icon Attributions:
+https://www.freepik.com/
+https://www.flaticon.com/
 # vCard - Personal portfolio
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
