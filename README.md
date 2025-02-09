@@ -1,4 +1,4 @@
-#Forked from https://github.com/codewithsadee/vcard-personal-portfolio.git
+# Forked from https://github.com/codewithsadee/vcard-personal-portfolio.git
 # vCard - Personal portfolio
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
