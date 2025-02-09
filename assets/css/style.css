@@ -332,7 +332,7 @@ main {
 }
 
 .avatar-box {
-  background: var(--bg-gradient-onyx);
+  background: var(--eerie-black-2);
   border-radius: 20px;
 }
 
@@ -1880,8 +1880,6 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
-
-
 
 .skills-list {
   display: grid;
