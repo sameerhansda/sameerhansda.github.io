@@ -1881,21 +1881,68 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+
+/* Parent container for skills and hobbies */
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
-  gap: 20px; /* Adds space between items */
-  list-style: none; /* Removes default bullet points */
-  padding: 0; /* Removes default padding */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between items */
+  list-style: none; /* Remove bullet points */
+  padding: 20px; /* Add padding inside the container */
+  margin: 0 auto; /* Center the content horizontally */
+  box-sizing: border-box; /* Include padding in width calculations */
 }
 
+/* Individual skill/hobby items */
 .skills-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: flex-start; /* Left-align content */
+  text-align: left;
+  padding: 10px; /* Add space inside each item box */
+  background-color: --eerie-black-2; /* Optional: Add a light background for better visibility */
+  border-radius: 8px; /* Rounded corners for a clean look */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
 }
 
-.service-icon-box img {
-  margin-bottom: 10px; /* Adds space between the icon and text */
+.skills-item:last-child {
+  padding: 0;
+  margin: 0;
+  height: auto;
 }
+
+/* Images inside skill/hobby items */
+.service-icon-box img {
+  max-width: 100%; /* Ensure images resize within their container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Text inside skill/hobby items */
+.title-wrapper h5 {
+  word-wrap: break-word; /* Break long words to prevent overflow */
+  overflow-wrap: break-word;
+}
+
+/* Responsive adjustments for medium screens (e.g., tablets) */
+@media (max-width: 768px) {
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column size for smaller screens */
+    gap: 15px;
+    padding: 15px; /* Reduce padding slightly on smaller screens */
+  }
+}
+
+/* Responsive adjustments for small screens (e.g., mobile phones) */
+@media (max-width: 480px) {
+  .skills-list {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Single column for very small screens */
+    gap: 10px;
+    padding: 10px; /* Further reduce padding on very small screens */
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 20px); /* Add some space on both sides of the viewport */
+    box-sizing: border-box;
+  }
+}
+
+
